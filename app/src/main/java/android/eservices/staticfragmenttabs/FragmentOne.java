@@ -7,18 +7,16 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-//TODO : fix this fragment so it works :)
 //Once it's done, then create a second fragment with the other layout
 public class FragmentOne extends Fragment {
 
-//    public FragmentOne() {
-//        //TODO
-//    }
-//
-//    public static FragmentOne newInstance() {
-//        //TODO
-//        return null;
-//    }
+    public static final String TAB_NAME = "ADD COUNTER";
+
+    public FragmentOne() { }
+
+    public static FragmentOne newInstance() {
+        return new FragmentOne();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
