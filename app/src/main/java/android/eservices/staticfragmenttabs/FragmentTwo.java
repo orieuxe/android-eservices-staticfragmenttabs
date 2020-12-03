@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 
 //TODO : fix this fragment so it works :)
 //Once it's done, then create a second fragment with the other layout
-public class FragmentOne extends Fragment {
+public class FragmentTwo extends Fragment {
 
 //    public FragmentOne() {
 //        //TODO
@@ -23,7 +23,7 @@ public class FragmentOne extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_one, container, false);
+        return inflater.inflate(R.layout.fragment_two, container, false);
     }
 
     @Override
