@@ -16,7 +16,7 @@ public class MainActivity extends FragmentActivity {
 
     private ViewPager2 viewPager;
     private TabLayout tabLayout;
-    private int currentCounter;
+    private int currentCpt;
     private TextView counterTextView;
 
     @Override
@@ -24,7 +24,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        currentCounter = 0;
+        currentCpt = 0;
         tabLayout = findViewById(R.id.tablayout);
         viewPager = findViewById(R.id.tab_viewpager);
 
@@ -36,7 +36,7 @@ public class MainActivity extends FragmentActivity {
         counterTextView = findViewById(R.id.counter_textview);
         tabLayout = findViewById(R.id.tablayout);
 
-        counterTextView.setText(getString(R.string.counter_text, currentCounter));
+        counterTextView.setText(getString(R.string.counter_text, currentCpt));
 
         final FragmentOne fragmentOne = FragmentOne.newInstance();
         final FragmentTwo fragmentTwo = FragmentTwo.newInstance();
@@ -67,6 +67,13 @@ public class MainActivity extends FragmentActivity {
         tabLayoutMediator.attach();
     }
 
+    public void incrementCounter() {
+        currentCpt++;
+        counterTextView.setText(getString(R.string.counter_text, currentCpt));
+    }
 
-    //TODO : increment and decrement counter, use the already provided String ressource (see strings.xml)
+    public void decrementCounter() {
+        currentCpt--;
+        counterTextView.setText(getString(R.string.counter_text, currentCpt));
+    }
 }
